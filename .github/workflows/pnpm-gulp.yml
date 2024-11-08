@@ -19,6 +19,9 @@ jobs:
       with:
         node-version: '20.17'
 
+    - name: pnpm-setup
+      uses: pnpm/action-setup@v2
+
     - name: Build
       run: |
         pnpm install -g gulp-cli
