@@ -1,0 +1,28 @@
+name: NodeJS with Gulp
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+
+    steps:
+    - name: Checkout repo
+    - uses: actions/checkout@v4
+
+    - name: Setup Node
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20.17'
+
+    - name: Build
+      run: |
+        pnpm install -g gulp-cli
+        pnpm install
+
+    - name: Run tests
+      run: gulp test
