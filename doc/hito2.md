@@ -132,6 +132,3 @@ Finalmente he elegido GitHub actions debido a la gran documentación existente, 
 
 Tras crear el [archivo para especificar las acciones de GitHub](../.github/workflows/pnpm-gulp.yml) y realizar algunos arreglos la integración continua se ha integrado con [éxito](hito1.md).
 ![demostracion_CI](images/demostracion_CI.png)
-
-### TDD
-El Test Driven Desing, TDD
