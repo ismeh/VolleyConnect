@@ -1,4 +1,5 @@
 # Integración continua
+
 ## Estructura de archivos
 <details>
   <summary>/root </summary>
@@ -26,6 +27,8 @@
     │
     ├── .env                # Variables de entorno (excluidas del repositorio)
     ├── .gitignore          # Ignorar archivos innecesarios
+    │   ├── /worflows
+    │       ├── pnpm-gulp.yml # Archivo de GitHub Actions
     ├── docker-compose.yml  # Configuración para orquestar servicios
     ├── [README.md](http://readme.md/)           # Descripción del proyecto
     └── package.json        # Dependencias del proyecto
