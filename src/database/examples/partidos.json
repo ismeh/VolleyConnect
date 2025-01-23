@@ -1,23 +1,23 @@
 [
     {
-        "id": "1",
+        "id": "1a",
         "date": "2023-11-01",
         "time": "18:00",
         "location": "Stadium 1",
-        "players": [1,2]
+        "players": ["1","2"]
     },
     {
         "id": "2",
         "date": "2023-11-02",
         "time": "20:00",
         "location": "Stadium 2",
-        "players": [2,3]
+        "players": ["2","3"]
     },
     {
         "id": "3",
         "date": "2023-11-03",
         "time": "19:00",
         "location": "Stadium 3",
-        "players": [1,3]
+        "players": ["1","3"]
     }
 ]
