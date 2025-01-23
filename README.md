@@ -5,8 +5,8 @@ VolleyConnect es una plataforma web, creada para la asignatura de Cloud Computin
 
 
 ## Documentación
-- [Hito 1: Repositorio](https://github.com/ismeh/VolleyConnect/blob/main/doc/hito1.md)
-- [Hito 2: CI](https://github.com/ismeh/VolleyConnect/blob/main/doc/hito2.md)
+- [Hito 1: Repositorio inicio](https://github.com/ismeh/VolleyConnect/blob/main/doc/hito1.md)
+- [Hito 2: Integración continua](https://github.com/ismeh/VolleyConnect/blob/main/doc/hito2.md)
 - [Hito 3: Diseño de microservicios](https://github.com/ismeh/VolleyConnect/blob/main/doc/hito3.md)
 - [Hito 4: Contenedores](https://github.com/ismeh/VolleyConnect/blob/main/doc/hito4.md)
 
@@ -21,3 +21,4 @@ Conceptos sobre como organizar nuestro proyecto, lógica de negocio, tests, inde
   - [Broker de mensajería](https://medium.com/@diego.coder/que-es-un-broker-de-mensajer%C3%ADa-8aa8ab7988e8)
     - [Arquitectura orientada a eventos]()
     - [RabbitMQ](https://www.rabbitmq.com/)
+

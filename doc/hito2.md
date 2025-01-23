@@ -1,4 +1,5 @@
 # Integración continua
+
 ## Estructura de archivos
 <details>
   <summary>/root </summary>
@@ -26,6 +27,8 @@
     │
     ├── .env                # Variables de entorno (excluidas del repositorio)
     ├── .gitignore          # Ignorar archivos innecesarios
+    │   ├── /worflows
+    │       ├── pnpm-gulp.yml # Archivo de GitHub Actions
     ├── docker-compose.yml  # Configuración para orquestar servicios
     ├── [README.md](http://readme.md/)           # Descripción del proyecto
     └── package.json        # Dependencias del proyecto
@@ -76,8 +79,8 @@ pnpm install --global gulp-cli
 pnpm add --save-dev gulp
 ```
 Tras instalarlo creamos un archivo de prueba `gulpfile.js` y ejecutamos `gulp`.
-![demostración](images/image-1.png)
-![example_test](images/image-2.png)
+![demostración](images/ejemplo_gulp.png)
+![example_test](images/demostracion_test.png)
 Podemos ver que funciona correctamente.
 
 ### Usando Gulp
@@ -96,7 +99,7 @@ Inicialmente pensé en utilizar un enfoque TDD ya que sería el único desarroll
 
 Podemos encontrar las siguientes bibliotecas:
 - **[Chai](https://www.chaijs.com/)**: Amplia y flexible, es una de las bibliotecas más comunes. Soporta estilos de aserción TDD y BDD.
-  ![chai_example](images/image.png)
+  ![chai_example](images/estilos_asercion.png)
 - **[Expect](https://github.com/Automattic/expect.js)** (integrada en Jest): Ofrece aserciones intuitivas, muy útil para pruebas con Jest. Basado en Should.js
 - [Should.js](https://shouldjs.github.io/): Adopta un estilo de aserción natural, haciendo el código más legible.
 - [Assert (Node.js)](https://nodejs.org/api/assert.html#assert): Es básica y está incluida en Node.js, ideal para aserciones simples en scripts de servidor.
@@ -114,8 +117,23 @@ Finalmente me decantaré por Jest ya que es un framework completo por lo que no 
 `pnpm add --save-dev jest`
 
 ## Integración continua
-- **GitHub Actions**
-- Travis CI
+CI/CD, continuous integration and continuous delivery, integración continua y entrega continua ....
+- **[GitHub Actions](https://github.com/features/actions)**
+  - Plataforma de CI/CD que permite automatizar la construcción, los test y el despliegue de la aplicación. Se pueden crera 'workflows' que ejecuten los test cada vez que realicemos un cambio en el repositorio o incluso que despliegue en producción el resultado de una pull request aceptada.
+  - Ofrece plantillas en función del código del repositorio para agilizar la puesta en marcha de la integración continua.
+- [Travis CI](https://www.travis-ci.com/product/) 
+ - Herramienta de CI/CD enfocada en el desarrollador.
+ - Se centra en la simplicidad, a continuación podemos ver un ejemplo que compara Travis con otras herramientas:
+  ![Comparando_herramientasCI_CD](images/comparacion_CI_CD.png)
+ - Es de pago.
+- [Jenkins](https://www.jenkins.io/)
+  - Herramienta open source de automatización de servidores.
+  - Permite implementar CI/CD
+
+Finalmente he elegido GitHub actions debido a la gran documentación existente, comunidad y facilidad.
+
+Tras crear el [archivo para especificar las acciones de GitHub](../.github/workflows/pnpm-gulp.yml) y realizar algunos arreglos la integración continua se ha integrado con [éxito](hito1.md).
+![demostracion_CI](images/demostracion_CI.png)
 
 ### Captura de los tests
 <figure style="width: 100%">
