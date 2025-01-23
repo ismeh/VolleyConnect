@@ -1,15 +1,17 @@
 const { validateUser, validatePartialUser } = require('../schemas/users');
-const UserModel = require('../models/user');
+const UserService = require('../services/user');
 
 class UserController {
   static async getAll (req, res) {
-    const users = await UserModel.getAll();
+    const users = await UserService.getAll();
+
+    res.status(200);
     res.json(users);
   }
 
   static async getById (req, res) {
     const { id } = req.params;
-    const user = await UserModel.getById(id);
+    const user = await UserService.getById(id);
     if (user) res.json(user);
     else res.status(404).json({ message: 'Usuario no encontrado' });
   }
@@ -23,7 +25,7 @@ class UserController {
       return res.status(422).json({ error: result.error.message });
     }
 
-    const newUser = await UserModel.create(result.data);
+    const newUser = await UserService.create(result.data);
 
     // Responder al cliente
     res.status(201).json(newUser);
@@ -32,7 +34,7 @@ class UserController {
   static async delete (req, res) {
     const { id } = req.params;
 
-    const result = await UserModel.delete(id);
+    const result = await UserService.delete(id);
 
     if (result === false) {
       return res.status(404).json({ message: 'Usuario no encontrado' });
@@ -50,7 +52,7 @@ class UserController {
 
     const { id } = req.params;
 
-    const updatedUser = await UserModel.update({ id, input: result.data });
+    const updatedUser = await UserService.update({ id, input: result.data });
 
     return res.json(updatedUser);
   }
