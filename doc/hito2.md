@@ -68,7 +68,9 @@ Un debate popular cuando se habla de gestores de tareas es si estos deberían fu
 
 Algunas de las tareas que se pueden automatizar son, la creación de documentación, el preprocesamiento de estilos, **testing**, linting (detección de errores en el código).
 
-Finalmente voy a optar por **Gulp** debido a su eficiencia (aunque quizá también haga uso de pnpm el gestor de paquetes que estoy utilizando). 
+Finalmente voy a optar por **Gulp** debido a su eficiencia (aunque quizá también haga uso de pnpm el gestor de paquetes que estoy utilizando).
+
+Más tarde, tras haber elegido Gulp, he seguido informando y posiblemente utilizar 'npm scripts' hubiese sido más que suficiente, ya que utilizar Gulp implica añadir abstracciones y esto significa añadir dependencias que incrementan la complejidad del proyecto.
 
 ### Instalación de Gulp
 Instalamos gulp en nuestro sistema y despues como dependencia de desarrollo.
@@ -132,3 +134,9 @@ Finalmente he elegido GitHub actions debido a la gran documentación existente, 
 
 Tras crear el [archivo para especificar las acciones de GitHub](../.github/workflows/pnpm-gulp.yml) y realizar algunos arreglos la integración continua se ha integrado con [éxito](hito1.md).
 ![demostracion_CI](images/demostracion_CI.png)
+
+### Captura de los tests
+<figure style="width: 100%">
+  <img src="images/ejecucion_test.png" alt="Ejecución tests">
+  <figcaption>Ejecución de tests</figcaption>
+</figure>

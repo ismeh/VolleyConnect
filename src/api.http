@@ -1,0 +1,65 @@
+# Ruta Inicial
+GET http://localhost:3000/
+
+# Rutas de Usuarios
+### Obtener todos los usuarios
+GET http://localhost:3000/users
+
+### Obtener un usuario por id
+GET http://localhost:3000/users/1
+
+### Crear un usuario
+POST http://localhost:3000/users
+Content-Type: application/json
+
+//El campo id se ignora gracias a la validación
+{
+    "id": "3", 
+    "nombre": "Juan",
+    "edad": 30,
+    "email": "juan@example.com"
+}
+
+### Actualizar un usuario
+PATCH http://localhost:3000/users/2
+Content-Type: application/json
+
+{
+    "email": "actualizarDeJuan@email.com"
+}
+
+
+### Eliminar un usuario
+DELETE http://localhost:3000/users/3
+
+
+#Rutas de partidos
+### Obtener todos los partidos
+GET http://localhost:3000/matches
+
+### Obtener un partido por id
+GET http://localhost:3000/matches/2
+
+### Crear un partido
+POST http://localhost:3000/matches
+Content-Type: application/json
+
+//El campo id se ignora gracias a la validación
+{
+    "id": "7a",
+    "date": "2023-11-01",
+    "time": "18:00",
+    "location": "Stadium 1",
+    "players": ["1", "2"]
+}
+
+### Actualizar un partido
+PATCH http://localhost:3000/matches/2
+Content-Type: application/json
+
+{
+    "location": "Stadium 222"
+}
+
+### Eliminar un partido
+DELETE http://localhost:3000/matches/3
