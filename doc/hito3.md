@@ -1,4 +1,5 @@
 Documentación para el Hito 3: Diseño de Microservicios
+
 1. Justificación Técnica del Framework Elegido para el Microservicio
 
 Se eligió Express.js como framework para desarrollar el microservicio debido a su simplicidad y flexibilidad. Express proporciona una forma eficiente de definir rutas y middlewares, lo que lo convierte en una excelente opción para crear APIs REST. Además, cuenta con una amplia comunidad y un ecosistema rico en herramientas que facilitan la integración de funcionalidades adicionales, como validaciones, logs y manejo de errores. Su rendimiento y escalabilidad lo hacen ideal para proyectos que pueden crecer en complejidad, como "VolleyConnect".
