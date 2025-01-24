@@ -1,0 +1,49 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000" # Mapea el puerto 3000 al host
+    environment:
+      - DB_HOST=db
+      - DB_USER=app_user
+      - DB_PASSWORD=app_password
+      - DB_NAME=volleyconnect
+    depends_on:
+      - db
+      - logs
+    networks:
+      - volley-network
+
+  db:
+    image: mariadb:10.9
+    environment:
+      - MYSQL_ROOT_PASSWORD=rootpassword
+      - MYSQL_DATABASE=volleyconnect
+      - MYSQL_USER=app_user
+      - MYSQL_PASSWORD=app_password
+    ports:
+      - "3306:3306" # Puerto estándar de MariaDB
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - volley-network
+
+  logs:
+    image: fluent/fluentd:v1.17-debian-1
+    ports:
+      - "24224:24224"
+      - "24224:24224/udp"
+    volumes:
+      - ./fluent.conf:/fluentd/etc/fluent.conf
+      - ./logs:/fluentd/logs
+    networks:
+      - volley-network
+
+volumes:
+  db_data:
+  fluentd_config:
+
+networks:
+  volley-network:
