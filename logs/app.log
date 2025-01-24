@@ -13,3 +13,5 @@
 23/01/25 18:32:09.581 [info]: ::ffff:127.0.0.1 - - [23/Jan/2025:17:32:09 +0000] "PATCH /matches/2 HTTP/1.1" 200 90 "-" "vscode-restclient"
 23/01/25 18:32:11.554 [info]: ::ffff:127.0.0.1 - - [23/Jan/2025:17:32:11 +0000] "DELETE /matches/3 HTTP/1.1" 204 - "-" "vscode-restclient"
 23/01/25 18:32:13.099 [info]: ::ffff:127.0.0.1 - - [23/Jan/2025:17:32:13 +0000] "DELETE /matches/3 HTTP/1.1" 404 35 "-" "vscode-restclient"
+{"level":"info","message":"::ffff:127.0.0.1 - - [24/Jan/2025:19:23:49 +0000] \"GET / HTTP/1.1\" 200 282 \"-\" \"vscode-restclient\""}
+{"level":"info","message":"::ffff:127.0.0.1 - - [24/Jan/2025:19:23:51 +0000] \"GET /users HTTP/1.1\" 200 233 \"-\" \"vscode-restclient\""}
