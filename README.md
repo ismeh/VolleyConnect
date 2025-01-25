@@ -9,6 +9,7 @@ VolleyConnect es una plataforma web, creada para la asignatura de Cloud Computin
 - [Hito 2: Integración continua](https://github.com/ismeh/VolleyConnect/blob/main/doc/hito2.md)
 - [Hito 3: Diseño de microservicios](https://github.com/ismeh/VolleyConnect/blob/main/doc/hito3.md)
 - [Hito 4: Contenedores](https://github.com/ismeh/VolleyConnect/blob/main/doc/hito4.md)
+- [Hito 5: Despliegue de la aplicación en un PaaS](https://github.com/ismeh/VolleyConnect/blob/main/doc/hito5.md)
 
 #### Bibliografía
 - Clean architecture

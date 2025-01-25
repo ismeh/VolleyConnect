@@ -38,6 +38,8 @@ Configuramos el despliegue
 Finalmente podemos ver que nuestra aplicación ha sido desplegada satisfactoriamente en el PaaS [Render](https://render.com/)
 ![deploy](images/deploy.png)
 
+
+
 ## Test de rendimiento
 Para evalaur el rendimiento de la aplicación he creado una cuenta en Postman y he descargado la aplicación, ya que no se pueden hacer test de rendimiento desde la interfaz web.
 
@@ -49,5 +51,7 @@ He empezado realizando pruebas con poca carga y la he ido incrementando conforme
 ![20test](images/20test.png)
 - 100 VU - Carga Fija - 1Min
 ![100test](images/100test.png)
+
+![web_metrics](images/web_metrics.png)
 
 Solo podemos simular 100 usuarios por lo que para seguir evaluando el rendimiento tendríamos que utilizar otras herramientas o solicitar respuestas más cantidad de datos.
