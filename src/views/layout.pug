@@ -1,7 +1,19 @@
 doctype html
-html
+html(lang="en")
   head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title VolleyConnect
+    link(rel="stylesheet", href="../public/stylesheets/style.css")
   body
-    block content
+    header
+      nav
+        ul
+          li: a(href="/") Inicio
+          li: a(href="/matches") Partidos
+          li: a(href="/users") Usuarios
+          //- li: a(href="/create-event") Crear Partido
+    main
+      block content
+    footer
+      p &copy; 2025 VolleyConnect - Todos los derechos reservados

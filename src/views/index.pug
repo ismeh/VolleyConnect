@@ -1,13 +1,8 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome t0 #{title}
-  p This is the index page.
-  table 
-    tr
-      th Name
-      th Age
-      tr
-        td="asss" 
-        td=2 
+  section.hero
+    h1 Bienvenido a VolleyConnect
+    p Organiza y participa en partidos de voleibol fácilmente.
+    a.btn(href="/matches") Ver Partidos
+    //- a.btn(href="/create-event") Crear Partido
