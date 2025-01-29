@@ -22,6 +22,7 @@ services:
   - type: web
     name: volleyconnect-db
     env: docker
+    region: frankfurt
     plan: free
     envVars:
       - key: MYSQL_ROOT_PASSWORD
@@ -36,4 +37,5 @@ services:
   - type: web
     name: volleyconnect-logs
     env: docker
+    region: frankfurt
     plan: free
