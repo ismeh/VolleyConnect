@@ -25,7 +25,7 @@ services:
       - volleyconnect-db
       - volleyconnect-logs
 
-  - type: database
+  - type: web
     name: volleyconnect-db
     env: docker
     plan: free
