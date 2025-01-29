@@ -5,8 +5,6 @@ services:
     region: frankfurt
     plan: free
     dockerfilePath: Dockerfile
-    buildCommand: ""
-    startCommand: "npm start"
     envVars:
       - key: DB_HOST
         value: volleyconnect-db
