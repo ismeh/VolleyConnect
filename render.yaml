@@ -1,7 +1,8 @@
 services:
   - type: web
     name: volleyconnect-app
-    env: docker
+    runtime: docker
+    region: frankfurt
     plan: free
     dockerfilePath: Dockerfile
     buildCommand: ""
@@ -19,8 +20,6 @@ services:
         value: volleyconnect-logs
       - key: FLUENTD_PORT
         value: "24224"
-    ports:
-      - port: 3000
     dependsOn:
       - volleyconnect-db
       - volleyconnect-logs
@@ -39,29 +38,9 @@ services:
         value: app_user
       - key: MYSQL_PASSWORD
         value: app_password
-    ports:
-      - port: 3306
-    volumes:
-      - name: db_data
-        path: /var/lib/mysql
 
   - type: web
     name: volleyconnect-logs
     env: docker
     plan: free
     image: fluent/fluentd:v1.17-debian-1
-    ports:
-      - port: 24224
-        protocol: tcp
-      - port: 24224
-        protocol: udp
-    volumes:
-      - name: fluentd_config
-        path: /fluentd/etc/fluent.conf
-      - name: fluentd_logs
-        path: /fluentd/logs
-
-volumes:
-  - name: db_data
-  - name: fluentd_config
-  - name: fluentd_logs
