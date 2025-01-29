@@ -20,15 +20,11 @@ services:
         value: volleyconnect-logs
       - key: FLUENTD_PORT
         value: "24224"
-    dependsOn:
-      - volleyconnect-db
-      - volleyconnect-logs
 
   - type: web
     name: volleyconnect-db
     env: docker
     plan: free
-    image: mariadb:10.9
     envVars:
       - key: MYSQL_ROOT_PASSWORD
         value: rootpassword
@@ -43,4 +39,3 @@ services:
     name: volleyconnect-logs
     env: docker
     plan: free
-    image: fluent/fluentd:v1.17-debian-1
