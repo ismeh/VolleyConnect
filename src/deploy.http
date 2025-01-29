@@ -1,0 +1,65 @@
+# Ruta Inicial
+GET https://volleyconnect-obxi.onrender.com/
+
+# Rutas de Usuarios
+### Obtener todos los usuarios
+GET https://volleyconnect-obxi.onrender.com/users
+
+### Obtener un usuario por id
+GET https://volleyconnect-obxi.onrender.com/users/1
+
+### Crear un usuario
+POST https://volleyconnect-obxi.onrender.com/users
+Content-Type: application/json
+
+//El campo id se ignora gracias a la validación
+{
+    "id": "3", 
+    "nombre": "asdf",
+    "edad": 30,
+    "email": "juan@example.com"
+}
+
+### Actualizar un usuario
+PATCH https://volleyconnect-obxi.onrender.com/users/2
+Content-Type: application/json
+
+{
+    "email": "actualizarDeJuan@email.com"
+}
+
+
+### Eliminar un usuario
+DELETE https://volleyconnect-obxi.onrender.com/users/3
+
+
+#Rutas de partidos
+### Obtener todos los partidos
+GET https://volleyconnect-obxi.onrender.com/matches
+
+### Obtener un partido por id
+GET https://volleyconnect-obxi.onrender.com/matches/2
+
+### Crear un partido
+POST https://volleyconnect-obxi.onrender.com/matches
+Content-Type: application/json
+
+//El campo id se ignora gracias a la validación
+{
+    "id": "7a",
+    "date": "2023-11-01",
+    "time": "18:00",
+    "location": "Stadium 1",
+    "players": ["1", "2"]
+}
+
+### Actualizar un partido
+PATCH https://volleyconnect-obxi.onrender.com/matches/2
+Content-Type: application/json
+
+{
+    "location": "Stadium 222"
+}
+
+### Eliminar un partido
+DELETE https://volleyconnect-obxi.onrender.com/matches/3
